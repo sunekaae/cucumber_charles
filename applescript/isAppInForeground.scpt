@@ -1,0 +1,1 @@
+return isAppInForeground("Terminal")on isAppInForeground(appName)	tell application "System Events" to (name of processes) contains appName	tell application "System Events"	set frontApp to name of first application process whose frontmost is true	end tell	if frontApp equals appName then	  return true	else	  return false	endend isAppInForeground
